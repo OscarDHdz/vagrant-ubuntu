@@ -1,17 +1,17 @@
 # Jenkins Docker Dev Environment
-This project is a solution to let you start using jenkins with docker on int out of the box.
+This project allows you to set up a Jenkins with docker environment out of the box.
 
 ## Getting Started
 
 ### Install Vagrant
-Basically we will rely on Vagrant yo provide a environment for any machine (Mac OS, Lunix, Windos).
+Basically we rely on Vagrant to provide an environment for any machine (Mac OS, Lunix, Windows).
 
 1. First of all, you need to install a VM Provider, I recommend [VirtualBox](https://www.virtualbox.org/)
 2. Then, you gotta install [Vagrant](https://www.vagrantup.com/)
 
 ### Run your environment!
 1. Open your terminal an navigate to the root of this project
-2. Start your environment
+2. Start your vm environment
 ```
 vagrant up
 ```
@@ -41,11 +41,12 @@ When you type `vagrant up` Vagrant:
 
 
 ### init.sh
-The initial script that is ran when the vm starts. It does the following steps:
+The initial script that is ran when the vm starts.   
+It does the following steps:
 
 1. Make path in host for `/var/jenkins_home`
 2. Grants permissions for it
-3. Installs Docker
+3. Installs Docker from [get.docker](http://get.docker.com)
 4. Adds ubuntu default user to docker group
-5. Creates a jenkins docker image with the provided `Dockerfile`. This one prepares the jenkins Container to be able to run docker inside of it
+5. Creates a jenkins docker image with the provided `Dockerfile`. This one prepares the jenkins Container to be able to run docker inside of it by binding docker.sock
 6. And finally runs that jenkins-docker container
