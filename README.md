@@ -1,5 +1,6 @@
 # Jenkins Docker Dev Environment
-This project allows you to set up a Jenkins with docker environment out of the box.
+This project gives you a Jenkins environment out of the box for your machine. Being more specific, a VM runing a Jenkins Docker contianener with docker on it... yeap Docker inside Docker 
+
 
 ## Getting Started
 
